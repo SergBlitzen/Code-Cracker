@@ -29,14 +29,43 @@ class GameButton:
         self.bind = self.button.bind
         self.get = self.button.cget
 
-        # эта часть кода для нерабочей части функции highlight_button()
-        #
-        # self.get_color = self.button['bg']
 
+def restart():
 
+    global turns
+    turns = 0
 
-def new_game():
-    pass
+    new_game_list = list(range(1, 10))
+    random.shuffle(new_game_list)
+
+    for i in buttons:
+        i.value = random.choice(new_game_list)
+        new_game_list.remove(i.value)
+        i.config(bg='SystemButtonFace', text='1')
+        i.text_number = '1'
+
+    for i in history_buttons:
+        for j in i:
+            j.config(bg='SystemButtonFace', text='')
+
+    for i in labels_history:
+        i.config(text='')
+
+    highlight_numbers()
+
+    correct_label_horizontal_1.config(text='0')
+    correct_label_vertical_1.config(text='0')
+    correct_label_horizontal_2.config(text='0')
+    correct_label_vertical_2.config(text='0')
+    correct_label_horizontal_3.config(text='0')
+    correct_label_vertical_3.config(text='0')
+
+    row_correct_label_horizontal_1.config(text='0')
+    row_correct_label_vertical_1.config(text='0')
+    row_correct_label_horizontal_2.config(text='0')
+    row_correct_label_vertical_2.config(text='0')
+    row_correct_label_horizontal_3.config(text='0')
+    row_correct_label_vertical_3.config(text='0')
 
 
 def highlight_button(button):
@@ -50,14 +79,6 @@ def highlight_button(button):
         return
 
 
-    # этот код НЕ работает, причём хрен знает по какой причине. он меняет цвет кнопки в программе,
-    # но не меняет само значение бэкграунда. надо разбираться
-    #
-    # if button.get_color == 'SystemButtonFace':
-    #     button.config(bg='coral')
-    #     print(button.get_color)
-
-
 def change_number_up(button):
 
     while int(button.text_number) >= 1 <= 9:
@@ -68,7 +89,6 @@ def change_number_up(button):
     if int(button.text_number) == 10:
         button.text_number = '1'
         button.config(text=button.text_number)
-
 
     highlight_numbers()
 
@@ -83,7 +103,6 @@ def change_number_down(button):
     if int(button.text_number) == 0:
         button.text_number = '9'
         button.config(text=button.text_number)
-
 
     highlight_numbers()
 
@@ -113,8 +132,6 @@ def check():
 
         for i in row_correct_labels:
             i.config(text=str('3'))
-
-
 
     return
 
@@ -591,7 +608,6 @@ def fill_history():
         row_correct_label_vertical_2_turn_1.config(text=row_correct_label_vertical_2['text'])
         row_correct_label_vertical_3_turn_1.config(text=row_correct_label_vertical_3['text'])
 
-
     if turns == 2:
         button_1_history_turn_2.config(text=button_1.text_number)
         button_2_history_turn_2.config(text=button_2.text_number)
@@ -614,7 +630,6 @@ def fill_history():
         row_correct_label_vertical_1_turn_2.config(text=row_correct_label_vertical_1['text'])
         row_correct_label_vertical_2_turn_2.config(text=row_correct_label_vertical_2['text'])
         row_correct_label_vertical_3_turn_2.config(text=row_correct_label_vertical_3['text'])
-
 
     if turns == 3:
         button_1_history_turn_3.config(text=button_1.text_number)
@@ -639,7 +654,6 @@ def fill_history():
         row_correct_label_vertical_2_turn_3.config(text=row_correct_label_vertical_2['text'])
         row_correct_label_vertical_3_turn_3.config(text=row_correct_label_vertical_3['text'])
 
-
     if turns == 4:
         button_1_history_turn_4.config(text=button_1.text_number)
         button_2_history_turn_4.config(text=button_2.text_number)
@@ -662,7 +676,6 @@ def fill_history():
         row_correct_label_vertical_1_turn_4.config(text=row_correct_label_vertical_1['text'])
         row_correct_label_vertical_2_turn_4.config(text=row_correct_label_vertical_2['text'])
         row_correct_label_vertical_3_turn_4.config(text=row_correct_label_vertical_3['text'])
-
 
     if turns == 5:
         button_1_history_turn_5.config(text=button_1.text_number)
@@ -687,7 +700,6 @@ def fill_history():
         row_correct_label_vertical_2_turn_5.config(text=row_correct_label_vertical_2['text'])
         row_correct_label_vertical_3_turn_5.config(text=row_correct_label_vertical_3['text'])
 
-
     if turns == 6:
         button_1_history_turn_6.config(text=button_1.text_number)
         button_2_history_turn_6.config(text=button_2.text_number)
@@ -710,7 +722,6 @@ def fill_history():
         row_correct_label_vertical_1_turn_6.config(text=row_correct_label_vertical_1['text'])
         row_correct_label_vertical_2_turn_6.config(text=row_correct_label_vertical_2['text'])
         row_correct_label_vertical_3_turn_6.config(text=row_correct_label_vertical_3['text'])
-
 
     if turns == 7:
         button_1_history_turn_7.config(text=button_1.text_number)
@@ -735,7 +746,6 @@ def fill_history():
         row_correct_label_vertical_2_turn_7.config(text=row_correct_label_vertical_2['text'])
         row_correct_label_vertical_3_turn_7.config(text=row_correct_label_vertical_3['text'])
 
-
     if turns == 8:
         button_1_history_turn_8.config(text=button_1.text_number)
         button_2_history_turn_8.config(text=button_2.text_number)
@@ -758,7 +768,6 @@ def fill_history():
         row_correct_label_vertical_1_turn_8.config(text=row_correct_label_vertical_1['text'])
         row_correct_label_vertical_2_turn_8.config(text=row_correct_label_vertical_2['text'])
         row_correct_label_vertical_3_turn_8.config(text=row_correct_label_vertical_3['text'])
-
 
         for i in button_1_history:
             if i['text'] == str(button_1.value):
@@ -795,7 +804,6 @@ def fill_history():
         for i in button_9_history:
             if i['text'] == str(button_9.value):
                 i.config(bg='coral')
-
 
 
 window = Tk()
@@ -855,7 +863,15 @@ button_9.bind("<Button-1>", lambda i, button=button_9: change_number_up(button))
 button_9.bind("<Button-3>", lambda i, button=button_9: change_number_down(button))
 button_9.bind("<Button-2>", lambda i, button=button_9: highlight_button(button))
 
-buttons = [button_1, button_2, button_3, button_4, button_5, button_6, button_7, button_8, button_9]
+buttons = [button_1,
+           button_2,
+           button_3,
+           button_4,
+           button_5,
+           button_6,
+           button_7,
+           button_8,
+           button_9]
 
 
 chosen_numbers = Frame(window, pady=10)
@@ -3228,5 +3244,121 @@ button_9_history = [button_9_history_turn_1,
                     button_9_history_turn_6,
                     button_9_history_turn_7,
                     button_9_history_turn_8]
+
+history_buttons = [button_1_history,
+                   button_2_history,
+                   button_3_history,
+                   button_4_history,
+                   button_5_history,
+                   button_6_history,
+                   button_7_history,
+                   button_8_history,
+                   button_9_history]
+
+labels_history = [correct_label_vertical_1_turn_1,
+                  correct_label_vertical_2_turn_1,
+                  correct_label_vertical_3_turn_1,
+                  correct_label_horizontal_1_turn_1,
+                  correct_label_horizontal_2_turn_1,
+                  correct_label_horizontal_3_turn_1,
+                  row_correct_label_vertical_1_turn_1,
+                  row_correct_label_vertical_2_turn_1,
+                  row_correct_label_vertical_3_turn_1,
+                  row_correct_label_horizontal_1_turn_1,
+                  row_correct_label_horizontal_2_turn_1,
+                  row_correct_label_horizontal_3_turn_1,
+                  correct_label_vertical_1_turn_2,
+                  correct_label_vertical_2_turn_2,
+                  correct_label_vertical_3_turn_2,
+                  correct_label_horizontal_1_turn_2,
+                  correct_label_horizontal_2_turn_2,
+                  correct_label_horizontal_3_turn_2,
+                  row_correct_label_vertical_1_turn_2,
+                  row_correct_label_vertical_2_turn_2,
+                  row_correct_label_vertical_3_turn_2,
+                  row_correct_label_horizontal_1_turn_2,
+                  row_correct_label_horizontal_2_turn_2,
+                  row_correct_label_horizontal_3_turn_2,
+                  correct_label_vertical_1_turn_3,
+                  correct_label_vertical_2_turn_3,
+                  correct_label_vertical_3_turn_3,
+                  correct_label_horizontal_1_turn_3,
+                  correct_label_horizontal_2_turn_3,
+                  correct_label_horizontal_3_turn_3,
+                  row_correct_label_vertical_1_turn_3,
+                  row_correct_label_vertical_2_turn_3,
+                  row_correct_label_vertical_3_turn_3,
+                  row_correct_label_horizontal_1_turn_3,
+                  row_correct_label_horizontal_2_turn_3,
+                  row_correct_label_horizontal_3_turn_3,
+                  correct_label_vertical_1_turn_4,
+                  correct_label_vertical_2_turn_4,
+                  correct_label_vertical_3_turn_4,
+                  correct_label_horizontal_1_turn_4,
+                  correct_label_horizontal_2_turn_4,
+                  correct_label_horizontal_3_turn_4,
+                  row_correct_label_vertical_1_turn_4,
+                  row_correct_label_vertical_2_turn_4,
+                  row_correct_label_vertical_3_turn_4,
+                  row_correct_label_horizontal_1_turn_4,
+                  row_correct_label_horizontal_2_turn_4,
+                  row_correct_label_horizontal_3_turn_4,
+                  correct_label_vertical_1_turn_5,
+                  correct_label_vertical_2_turn_5,
+                  correct_label_vertical_3_turn_5,
+                  correct_label_horizontal_1_turn_5,
+                  correct_label_horizontal_2_turn_5,
+                  correct_label_horizontal_3_turn_5,
+                  row_correct_label_vertical_1_turn_5,
+                  row_correct_label_vertical_2_turn_5,
+                  row_correct_label_vertical_3_turn_5,
+                  row_correct_label_horizontal_1_turn_5,
+                  row_correct_label_horizontal_2_turn_5,
+                  row_correct_label_horizontal_3_turn_5,
+                  correct_label_vertical_1_turn_6,
+                  correct_label_vertical_2_turn_6,
+                  correct_label_vertical_3_turn_6,
+                  correct_label_horizontal_1_turn_6,
+                  correct_label_horizontal_2_turn_6,
+                  correct_label_horizontal_3_turn_6,
+                  row_correct_label_vertical_1_turn_6,
+                  row_correct_label_vertical_2_turn_6,
+                  row_correct_label_vertical_3_turn_6,
+                  row_correct_label_horizontal_1_turn_6,
+                  row_correct_label_horizontal_2_turn_6,
+                  row_correct_label_horizontal_3_turn_6,
+                  correct_label_vertical_1_turn_7,
+                  correct_label_vertical_2_turn_7,
+                  correct_label_vertical_3_turn_7,
+                  correct_label_horizontal_1_turn_7,
+                  correct_label_horizontal_2_turn_7,
+                  correct_label_horizontal_3_turn_7,
+                  row_correct_label_vertical_1_turn_7,
+                  row_correct_label_vertical_2_turn_7,
+                  row_correct_label_vertical_3_turn_7,
+                  row_correct_label_horizontal_1_turn_7,
+                  row_correct_label_horizontal_2_turn_7,
+                  row_correct_label_horizontal_3_turn_7,
+                  correct_label_vertical_1_turn_8,
+                  correct_label_vertical_2_turn_8,
+                  correct_label_vertical_3_turn_8,
+                  correct_label_horizontal_1_turn_8,
+                  correct_label_horizontal_2_turn_8,
+                  correct_label_horizontal_3_turn_8,
+                  row_correct_label_vertical_1_turn_8,
+                  row_correct_label_vertical_2_turn_8,
+                  row_correct_label_vertical_3_turn_8,
+                  row_correct_label_horizontal_1_turn_8,
+                  row_correct_label_horizontal_2_turn_8,
+                  row_correct_label_horizontal_3_turn_8,
+                  ]
+
+restart_button = Button(window,
+                        text='Restart',
+                        font=('Times', 20),
+                        bd=4,
+                        command=restart
+                        )
+restart_button.place(x=350, y=475)
 
 window.mainloop()
