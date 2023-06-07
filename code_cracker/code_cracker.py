@@ -1,5 +1,6 @@
-from tkinter import *
 import random
+from tkinter import *
+
 
 game_list = list(range(1, 10))
 random.shuffle(game_list)
@@ -1168,7 +1169,6 @@ check = Button(
 check.grid(row=3, column=3, rowspan=2, columnspan=2)
 
 
-
 # здесь начинается блок для фреймов лога ходов
 #######################################################################################################################
 history_turn_1 = Frame(window, height=550, width=700)
@@ -1264,7 +1264,6 @@ button_9_history_turn_1 = Label(
     relief=RAISED
 )
 button_9_history_turn_1.grid(row=2, column=2)
-
 
 
 correct_label_horizontal_1_turn_1 = Label(
@@ -1762,7 +1761,6 @@ button_9_history_turn_3 = Label(
 button_9_history_turn_3.grid(row=2, column=2)
 
 
-
 correct_label_horizontal_1_turn_3 = Label(
     history_turn_3,
     height=2,
@@ -2009,7 +2007,6 @@ button_9_history_turn_4 = Label(
     relief=RAISED
 )
 button_9_history_turn_4.grid(row=2, column=2)
-
 
 
 correct_label_horizontal_1_turn_4 = Label(
@@ -2261,7 +2258,6 @@ button_9_history_turn_5 = Label(
 button_9_history_turn_5.grid(row=2, column=2)
 
 
-
 correct_label_horizontal_1_turn_5 = Label(
     history_turn_5,
     height=2,
@@ -2509,7 +2505,6 @@ button_9_history_turn_6 = Label(
     relief=RAISED
 )
 button_9_history_turn_6.grid(row=2, column=2)
-
 
 
 correct_label_horizontal_1_turn_6 = Label(
@@ -2761,7 +2756,6 @@ button_9_history_turn_7 = Label(
 button_9_history_turn_7.grid(row=2, column=2)
 
 
-
 correct_label_horizontal_1_turn_7 = Label(
     history_turn_7,
     height=2,
@@ -3009,7 +3003,6 @@ button_9_history_turn_8 = Label(
     relief=RAISED
 )
 button_9_history_turn_8.grid(row=2, column=2)
-
 
 
 correct_label_horizontal_1_turn_8 = Label(
@@ -3362,3 +3355,11 @@ restart_button = Button(window,
 restart_button.place(x=350, y=475)
 
 window.mainloop()
+
+
+def main():
+    pass
+
+
+if __name__ == '__main__':
+    main()
