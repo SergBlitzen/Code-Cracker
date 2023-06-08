@@ -4,10 +4,6 @@ from tkinter import Label
 from main_window.settings import values
 
 
-class InfoLabel:
-    ...
-
-
 class GameButton(Label):
 
     # Initializing label settings with super(), instantly placing

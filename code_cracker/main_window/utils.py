@@ -35,7 +35,11 @@ def initialize_values(buttons_count: int) -> List[str]:
 
 
 def get_button_coords(coords: Tuple[Tuple[int, int]]) -> List[Tuple[int, int]]:
+    """Gets list of button grid coordinates."""
     return [x for x in coords if x[0] <= 2 and x[1] <= 2]
 
 
-
+def get_chosen_numbers():
+    """Creates list of numbers to highlight."""
+    numbers = [str(x) for x in range(1, 10)]
+    return numbers
