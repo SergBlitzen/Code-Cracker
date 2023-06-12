@@ -52,6 +52,48 @@ CHOSEN_NUMBERS_LABEL_SETTINGS = {
     'relief': 'raised'
 }
 
+
+CORRECT_LABEL_HORIZ_SETTINGS = {
+    'width': 4,
+    'height': 5,
+    'text': '0',
+    'font': ('Times', 15),
+    'bd': 3,
+    'bg': 'orange',
+    'relief': 'raised'
+}
+
+ROW_CORRECT_LABEL_HORIZ_SETTINGS = {
+    'width': 4,
+    'height': 5,
+    'text': '0',
+    'font': ('Times', 15),
+    'bd': 3,
+    'bg': 'green',
+    'relief': 'raised'
+}
+
+CORRECT_LABEL_VERTICAL_SETTINGS = {
+    'width': 10,
+    'height': 2,
+    'text': '0',
+    'font': ('Times', 15),
+    'bd': 3,
+    'bg': 'orange',
+    'relief': 'raised'
+}
+
+ROW_CORRECT_LABEL_VERTICAL_SETTINGS = {
+    'width': 10,
+    'height': 2,
+    'text': '0',
+    'font': ('Times', 15),
+    'bd': 3,
+    'bg': 'green',
+    'relief': 'raised'
+}
+
+
 game_grid: Tuple[Tuple[int, int]] = utils.initialize_grid(
     rows=ROWS_COUNT,
     columns=COLUMNS_COUNT

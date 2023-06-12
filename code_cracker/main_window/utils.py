@@ -36,7 +36,12 @@ def initialize_values(buttons_count: int) -> List[str]:
 
 def get_button_coords(coords: Tuple[Tuple[int, int]]) -> List[Tuple[int, int]]:
     """Gets list of button grid coordinates."""
-    return [x for x in coords if x[0] <= 2 and x[1] <= 2]
+    return [x for x in coords if x[0] < 3 and x[1] < 3]
+
+
+def get_correct_labels(coords: Tuple[Tuple[int, int]]) -> List[Tuple[int, int]]:
+    """Gets list of correct labels grid coordinates."""
+    return [x for x in coords if (x[0] > 2 and x[1] < 3) or (x[1] > 2 and x[0] < 3)]
 
 
 def get_chosen_numbers():
