@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85b59d94-54fe-463e-a3c4-79ae4bf852a3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Code Cracker.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Code Cracker.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code_cracker/code_cracker_fix.py" beforeDir="false" afterPath="$PROJECT_DIR$/code_cracker/code_cracker_fix.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_cracker/main_window/funcs.py" beforeDir="false" afterPath="$PROJECT_DIR$/code_cracker/main_window/funcs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_cracker/main_window/labels.py" beforeDir="false" afterPath="$PROJECT_DIR$/code_cracker/main_window/labels.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_cracker/main_window/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/code_cracker/main_window/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_cracker/main_window/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/code_cracker/main_window/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code_cracker/main_window/window.py" beforeDir="false" afterPath="$PROJECT_DIR$/code_cracker/main_window/window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_cracker/main_window/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/code_cracker/src/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_cracker/main_window/funcs.py" beforeDir="false" afterPath="$PROJECT_DIR$/code_cracker/src/funcs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_cracker/main_window/labels.py" beforeDir="false" afterPath="$PROJECT_DIR$/code_cracker/src/labels.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_cracker/main_window/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/code_cracker/src/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_cracker/main_window/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/code_cracker/src/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code_cracker/main_window/window.py" beforeDir="false" afterPath="$PROJECT_DIR$/code_cracker/src/window.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,14 +72,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "E:/Python Projects/Code Cracker",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Python Projects/projects/Code Cracker&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Python Projects\Code Cracker\code_cracker\main_window" />
@@ -82,7 +88,7 @@
       <recent name="E:\Python Projects\Code Cracker\code_cracker_files" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.window">
+  <component name="RunManager" selected="Python.code_cracker_fix">
     <configuration name="code_cracker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Code Cracker" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -125,7 +131,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="funcs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="funcs (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Code Cracker" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -133,11 +139,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code_cracker/main_window" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code_cracker/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code_cracker/main_window/funcs.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code_cracker/src/funcs.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,7 +152,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="window (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Code Cracker" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,11 +160,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code_cracker/main_window" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/code_cracker/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code_cracker/main_window/utils.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/code_cracker/src/window.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -190,11 +196,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.window" />
-        <item itemvalue="Python.funcs" />
-        <item itemvalue="Python.code_cracker" />
         <item itemvalue="Python.code_cracker_fix" />
-        <item itemvalue="Python.utils" />
+        <item itemvalue="Python.window (1)" />
+        <item itemvalue="Python.funcs (1)" />
+        <item itemvalue="Python.code_cracker" />
+        <item itemvalue="Python.window" />
       </list>
     </recent_temporary>
   </component>

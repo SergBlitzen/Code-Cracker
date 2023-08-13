@@ -1,7 +1,8 @@
-from main_window.window import main_window
+from src.window import MainWindow
 
 
 def main():
+    main_window = MainWindow()
     main_window.mainloop()
 
 
