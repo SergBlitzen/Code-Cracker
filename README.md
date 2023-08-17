@@ -5,7 +5,7 @@ Guess the code in 8 turns by changing numbers and guessing the right place.
 
 ## Rules and controls
 <br>— Each code contains distinct unique numbers from 1 to 9;
-<br>— Orange labels shows how many numbers in row or colon are in their place;
+<br>— Orange labels shows how many numbers in row or column are in their place;
 <br>— Green labels shows how many numbers are in their row or colon, but not in place;
 <br>— Left click to increase number, right click to decrease;
 <br>— Middle button to highlight numbers;
