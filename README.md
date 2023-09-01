@@ -1,5 +1,5 @@
 # Code Cracker
-An adaptation of "Code Breaker" Persona 1 minigame bases on Python 3.11 using Tkinter.
+An adaptation of "Code Breaker" Persona 1 minigame using Tkinter
 
 Guess the code in 8 turns by changing numbers and determining it's right place.
 
